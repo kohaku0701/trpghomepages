@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  }
+/* 全体レイアウト用のコンテナ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    /* 左右マージン */
+}
+
+body{
+  background-image: url('image/parchment_01a.jpg');
+  background-size: cover;
+  font-family: 'IM Fell English SC', serif;
+  color: #2b1f14;
+;
+}
+main{
+  margin: 0;
+  padding: 0;
+  /*display: flex;*/
+  display: 20%;
+  justify-content: center; /* 横中央 */
+  text-align: center; /* 中身のテキストやアイコンを中央寄せ */
+  /*max-width: 800px;*/
+  padding: 20px;
+  min-width: 320px;
+
+}
+
+/*２カラム*/
+.two-column {
+    display: flex;
+    gap: 2rem; /* カラム間の余白 */
+    margin: 2rem 0;
+  }
+  
+  .two-column .left{
+        flex: 0.7;
+  }
+  .two-column .right {
+    flex: 0.3; /* 均等に幅をとる */
+  }
+  
+  /* スマホなど狭い画面では縦並びに */
+  @media screen and (max-width: 768px) {
+    .two-column {
+      flex-direction: column;
+    }
+  }
+  
+    
+.circle-icon {
+  display: inline-block;
+  width: 120px;  /* アイコンの大きさ */
+  height: 120px;
+  border-radius: 50%;
+  background-image: url("image/aicon.png");
+  background-size: cover;       /* 画像を丸にフィット */
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: right;
+    background-color: #ddd;
+      position: relative;
+  z-index: 1; 
+}
+
+/* ホバーしたときの拡大エフェクト */
+.circle-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+
+
+
+/*自分のプロフィール*/
+
+.profile-card {
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 320px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 1em auto;
+  min-width: 300px;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: #666;
+  font-size: 14px;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* 自己紹介カード用 */
+.self-intro {
+  background: #f9f9ff;
+  border-color: #daadff;
+    border-radius: 4px;
+}
+
+
+
+
+/* 少しずらしたボックス */
+.profile-card  {
+   margin: 0 auto 2em; /* 外側の余白（上下と中央配置） */
+   padding: 2em; /* 内側余白 */
+   background: none; /* 元のボックス背景色なし */
+   border: 1px solid #ccc; /* 線の太さ（1px）、種類（実線）、色（#ccc） */
+   position: relative; /* 配置（基準となる位置） */
+}
+
+.profile-card :after {
+   background-color: #e4dfe9; /* ずらしたボックスの背景色 */
+   border: none; /* 枠線なし */
+   content: ''; /* 擬似要素にコンテンツなし */
+   position: absolute; /* 配置（ここを動かす） */
+   top: 7px; /* 上から7pxずらす */
+   left: 7px; /* 左から7pxずらす */
+   width: 100%; /* 幅100%（親要素に合わせる） */
+   height: 100%; /* 高さ100%（親要素に合わせる） */
+   z-index: -1; /* 背景として後ろに表示 */
+}
+
+/* pタグの余白 */
+.profile-card p { margin:0; }
+
+
+/*シナリオアイコン*/
+.column01 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 自動調整 */
+  gap: 20px;
+  margin: 20px;
+  
+}
+
+.scenario-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+}
+
+.scenario-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%; /* 丸型 */
+  object-fit: cover;
+  margin-bottom: 10px;
+  max-width: 300px;
+}
+
+.scenario-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+.scenario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}

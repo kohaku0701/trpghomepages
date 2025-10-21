@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="狐白のホームページ" />
+    <title>TRPGKohaku</title>
+
+
+    <link rel="stylesheet" href="../css/style.css" /><link rel="stylesheet" href="../css/menyu.css" />
+    <link rel="stylesheet" href="../css/sabumenyu.css" />
+    <link rel="stylesheet" href="../css/pc.css" />
+    <link rel="stylesheet" href="../css/tes.css" />
+
+    <script src="../js/menu.js"></script>
+</head>
+
+
+<body>
+
+
+
+
+<header>
+    <nav>
+     <div class="drawer">
+     <!--- いわゆるロゴ ------>
+       <div id="logo"><a href="#">Kohakau</a></div>
+       <!--- いわゆるロゴ ------>
+     
+    <!-- ハンバーガーメニュー部分 --> 
+    <div class="Toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      </div>
+     <!-------------- drawer ここまで-->
+     
+     <div class="menu">
+      <ul>
+       <li><a href="../index.html">Home</a></li>
+       <li><a href="../gm.html">GM</a></li>
+       <li><a href="../pl.html">PC</a></li>
+      </ul>
+     </div>
+    </nav>
+    </header>
+
+
+<main>
+<div class="main-content">
+
+  
+
+      <section id="main">
+<h2><span class="sigil">✦</span> シナリオ一覧 <span class="sigil">✦</span> </h2>
+
+  <div class="main-content">
+<section id="main">
+<h2><span class="sigil">✦</span> TRPG <span class="sigil">✦</span> </h2>
+
+<div class="column01">
+  <a href="scenariokp.html" class="scenario-card">
+    <img src="../css/image/sinariokp.png" alt="KP可能">
+    <p>KP可能</p>
+  </a>
+
+  <a href="scenariopl.html" class="scenario-card">
+    <img src="../css/image/sinariotuka.png" alt="通過済み">
+    <p>通過済み</p>
+  </a>
+
+  <a href="scenariomi.html" class="scenario-card">
+    <img src="../css/image/sinariomituka.png" alt="通過予定">
+        <p>通過予定</p>
+  </a>
+
+  
+</div>
+
+
+</section>
+
+<!-- タグ一覧 -->
+<!-- タグ一覧 -->
+<div class="tag-filter">
+  <label><input type="checkbox" class="tag-checkbox" value="ホラー"> ホラー</label>
+  <label><input type="checkbox" class="tag-checkbox" value="短編"> 短編</label>
+  <label><input type="checkbox" class="tag-checkbox" value="初心者向け"> 初心者向け</label>
+  <label><input type="checkbox" class="tag-checkbox" value="長編"> 長編</label>
+  <label><input type="checkbox" class="tag-checkbox" value="推理"> 推理</label>
+  <label><input type="checkbox" class="tag-checkbox" value="上級者向け"> 上級者向け</label>
+</div>
+
+<!-- シナリオ一覧 -->
+<div class="scenario-list">
+  <div class="scenario-card" data-tags="ホラー 短編 初心者向け" data-id="1">
+    <img src="css/image/scenario1.png" alt="シナリオ1">
+    <h3>古びた館の秘密</h3>
+    <p>探索者たちは古びた館に招かれる...</p>
+    <button class="detail-btn" data-id="1">詳細を見る</button>
+  </div>
+
+  <div class="scenario-card" data-tags="長編 推理 上級者向け" data-id="2">
+    <img src="css/image/scenario2.png" alt="シナリオ2">
+    <h3>静かな町の闇</h3>
+    <p>小さな町で連続失踪事件が発生...</p>
+    <button class="detail-btn" data-id="2">詳細を見る</button>
+  </div>
+</div>
+
+
+<!-- モーダル -->
+<div id="scenarioModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+
+
+  </div>
+
+
+  </main>
+
+
+
+
+
+
+
+</body>
+<script src="../js/menyu.js"></script>
+<script src="../js/pc.js"></script>
+<script src="../js/tes.js"></script>
+</html>

@@ -1,0 +1,277 @@
+.character-page {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #605f70;
+  padding: 20px;
+
+}
+
+/* ヘッダー（名前と矢印） */
+.character-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.character-name {
+  font-size: 1.5em;
+  margin: 0 20px;
+  text-align: center;
+  flex: 20px;
+}
+.nav-arrow {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #666;
+}
+
+/* メインの2カラム */
+.character-content {
+  display: flex;
+  gap: 30px;
+}
+
+/* 左側（立ち絵） */
+.character-visual {
+  position: relative;
+  flex: 4;
+  text-align: center;
+
+  min-width: 50%;
+min-height: 100%;
+
+}
+.character-bg {
+  position: relative;
+}
+.character-bg img {
+  max-height: 100%;
+ 
+}
+.standing {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 700px;
+  max-width: 100%
+}
+
+
+/* 差分サムネイル */
+.character-variations {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+
+
+}
+.character-variations img {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: transform 0.2s;
+
+ box-shadow: -2px 4px 6px rgba(0,0, 0, 0.3);
+}
+.character-variations img:hover {
+  transform: scale(1.1);
+    opacity: 1;
+
+}
+
+
+
+.character-variations {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.variation {
+  position: relative;
+  display: inline-block;
+}
+
+.character-variations img {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.character-variations img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.caption {
+  position: absolute;
+  bottom: -25px; /* アイコンの下に表示 */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: #fff; /* 白にして読みやすく */
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75em;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+.variation:hover .caption {
+  opacity: 1;
+  bottom: -35px; /* 少し下にアニメーション */
+}
+
+
+/* 右側（情報パネル） */
+.character-info {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.info-block {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fafafa;
+  color: #605f70;
+}
+
+.toggle-content ul {
+  list-style: none;         /* デフォルトの・を消す */
+  counter-reset: scenos;    /* カウンターの初期化 */
+  padding-left: 1.5em;
+
+  
+}
+
+.toggle-content ul li {
+  counter-increment: scenos;    /* カウンターを進める */
+  position: relative;
+  margin: 0.5em 0;
+  padding-left: 2em;
+}
+
+.toggle-content ul li::before {
+  content: counter(scenos) ". ";  /* "1. " の形式で出力 */
+  position: absolute;
+  left: 0;
+  color: #605f70;  /* キャラのテーマカラーにすると映える */
+  font-weight: bold;
+}
+
+.toggle-content {
+  max-height: 0;              /* 閉じているときは高さ0 */
+  overflow: hidden;           /* はみ出し隠す */
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 10px;            /* 横だけ余白（閉じている時は上下0） */
+}
+
+.toggle-content.open {
+  max-height: 500px;          /* コンテンツに合わせて十分大きめの値 */
+  padding: 10px;              /* 開いたとき余白復活 */
+}
+
+
+
+  @media screen and (max-width: 600px) {
+    .character-content {
+      flex-direction: column;
+    }
+  }
+
+
+  .profile-box {
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+
+  font-family: "Hiragino Sans", "Meiryo", sans-serif;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+.profile-label {
+  color: #777;
+  font-size: 0.9em;
+  flex: 0 0 80px;  /* ラベル幅を固定 */
+}
+
+.profile-value {
+  flex: 1;
+  font-size: 1em;
+  text-align: left;
+}
+
+
+
+  .color-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1em;
+  font-size: 0.9rem;
+
+}
+
+.color-box .label {
+  background: #f5f5f5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.color-box .color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.color-box .color-code {
+  font-weight: bold;
+  font-family: monospace;
+}
+
+  @media screen and (max-width: 300px) {
+    .color-box {
+      flex-direction: column;
+    }
+  }
+
+/* アコーディオン */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+.toggle-content {
+  display: none;
+  margin-top: 8px;
+}

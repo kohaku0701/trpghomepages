@@ -1,0 +1,70 @@
+<div class="header">
+
+
+
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+  
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+          <li><span></span></li>
+  
+        <li>狐白のTRPG <span>ホームページ</span></li>
+  
+  
+        <li><a href="index.html" target="_self">ホーム</a></li>
+  
+  
+        <li class="accordion-parent">
+          <span class="accordion-toggle" data-label="GM">GM</span>
+          <ul class="submenu">
+            <a href="trpg.html#top">トップ</a>
+            <li><a href="trpg.html#trpg">TRPG</a></li>
+            <li><a href="trpg.html#mystery">マダミス</a></li>
+  
+          </ul>
+        
+  
+  
+          <li class="accordion-parent">
+              <span class="accordion-toggle" data-label="PL">PL</span>
+  
+  
+              <ul class="submenu">
+                <a href="junbi.html#top">トップ</a>
+                <li><a href="junbi.html#sinario">シナリオ</a></li>
+                <li><a href="junbi.html#pc">PC</a></li>
+  
+              </ul>
+  
+  
+    </div>
+
+    <div class="controls">
+  <button onclick="sortCards('asc')">昇順</button>
+  <button onclick="sortCards('desc')">降順</button>
+</div>
+
+<div class="character-grid" id="characterGrid">
+  <a href="char1.html" class="character-card" style="--color:#c0392b;" data-name="アリス">
+        <div class="card-number">1</div>
+    <img src="char1-icon.png" alt="キャラクター1">
+    <div class="char-name">アリス</div>
+  </a>
+
+  <a href="char2.html" class="character-card" style="--color:#2980b9;" data-name="ボブ">
+    <img src="char2-icon.png" alt="キャラクター2">
+    <div class="char-name">ボブ</div>
+  </a>
+
+  <a href="char3.html" class="character-card" style="--color:#27ae60;" data-name="チャーリー">
+    <img src="char3-icon.png" alt="キャラクター3">
+    <div class="char-name">チャーリー</div>
+  </a>
+</div>
+  </div>

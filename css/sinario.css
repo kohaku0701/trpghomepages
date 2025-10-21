@@ -1,0 +1,188 @@
+/* アコーディオン */
+.accordion-btn {
+  background: #d1d1d1;
+  color: #000000;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background: #f8f5f0;
+}
+
+.accordion-content.open {
+  padding: 1em;
+  max-height: 500px; /* 必要に応じて調整 */
+}
+
+/* シナリオカード */
+.scenario-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.scenario-card:hover {
+  transform: scale(1.02);
+  background: #f4f3f9;
+}
+
+.scenario-card {
+  opacity: 0.6;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.highlight {
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 2; /* 他より前に */
+
+}
+
+
+
+/* モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 70%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* タグバッジ */
+.tags {
+  margin: 6px 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: #eee;
+  color: #333;
+  font-size: 0.75em;
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tag:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* ハンドアウト表 */
+#modalHandout {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+#modalHandout th, #modalHandout td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+}
+#modalHandout th {
+  background: #f4f4f4;
+}
+
+/* 開閉アニメーション */
+.handout-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0; /* 閉じているときは余白なし */
+}
+
+.handout-wrapper.open {
+  max-height: 1000px; /* 十分大きめの値にしておく */
+  padding: 10px 0;     /* 開いたときに余白をつける */
+}
+
+
+/* ボタン */
+.handout-btn {
+  margin-top: 10px;
+  background: #444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s;
+}
+.handout-btn:hover {
+  background: #666;
+}
+
+
+.tuukaitiran{
+    border: 1px solid #333;
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 70%;
+  min-width: 200px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 1em auto;
+  min-width: 300px;
+  text-align: left;
+}
+
+h5{
+  text-align: center;
+}
+
+
+
+.two-columnsinario {
+    display: flex;
+    gap: 2rem; /* カラム間の余白 */
+    margin: 2rem 0;
+  }
+  
+  .two-columnsinario .left{
+        flex: 0.7;
+  }
+  .two-columnsinario .right {
+    flex: 0.3; /* 均等に幅をとる */
+  }
+  
+  /* スマホなど狭い画面では縦並びに */
+  @media screen and (max-width: 768px) {
+    .two-column {
+      flex-direction: column;
+    }
+  }

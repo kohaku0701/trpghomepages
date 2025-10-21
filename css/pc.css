@@ -1,0 +1,133 @@
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.character-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1; /* 正方形 */
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color, #555);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.char-name {
+  position: absolute;
+  bottom: -8%;
+  width: 100%;
+  height: 40%;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  margin-bottom: 5%;
+}
+.char-name-yo{
+    color: rgba(255,255,225,0.7);
+  font-size: 12px;
+  margin-top: 3%;
+}
+.char-name-ka{
+    color: #fff;
+  font-size: 16px;
+  margin-top: 5%;
+    font-weight: bold;
+}
+
+.character-card:hover .char-name {
+  opacity: 1;
+  transform: translateY(0); /* ふわっと浮かぶ */
+  background-color: rgba(50,50,50,0.7);
+
+}
+
+
+.controls {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.controls button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #666;
+  
+}
+
+
+
+
+
+#characterGrid {
+  display: grid;
+  margin-left: 10%;  
+  margin-right: 10%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  counter-reset: card-counter;
+}
+
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.char-name {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.scenario-name {
+  margin-top: 4px;
+  font-size: 0.85em;
+  color: #666;
+  text-align: center;
+  font-style: italic; /* 斜体にして雰囲気を出す */
+}
+
+/*
+.character-card::before {
+  counter-increment: card-counter;
+  content: counter(card-counter);
+  position: absolute;
+  top: 6px;
+  left: 6px;
+
+  color: white;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-family: 'Roboto Mono', monospace;
+}
+*/

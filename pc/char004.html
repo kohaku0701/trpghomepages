@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="狐白のホームページ" />
+    <title>TRPGKohaku</title>
+
+
+    <link rel="stylesheet" href="../css/style.css" /><link rel="stylesheet" href="../css/menyu.css" />
+    <link rel="stylesheet" href="../css/sabumenyu.css" />
+    <link rel="stylesheet" href="pcs.css" />
+
+    <script src="../js/submenu.js"></script>
+</head>
+
+
+<body>
+
+
+
+
+<header>
+    <nav>
+     <div class="drawer">
+     <!--- いわゆるロゴ ------>
+       <div id="logo"><a href="#">Kohakau</a></div>
+       <!--- いわゆるロゴ ------>
+     
+    <!-- ハンバーガーメニュー部分 --> 
+    <div class="Toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      </div>
+     <!-------------- drawer ここまで-->
+     
+     <div class="menu">
+      <ul>
+       <li><a href="../index.html">Home</a></li>
+       <li><a href="sinario/sinariokp.html">Scenario</a></li>
+       <li><a href="../pl.html">PC</a></li>
+      </ul>
+     </div>
+    </nav>
+    </header>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<main>
+<div class="main-content">
+
+
+
+
+  </div>
+
+
+  </main>
+
+
+  <!-- キャラクター一覧ページ -->
+
+<!-- <div class="controls">
+  <button onclick="sortCards('asc')">昇順</button>
+  <button onclick="sortCards('desc')">降順</button>
+</div>-->
+
+
+<div class="character-page">
+  <!-- 名前と左右の矢印 -->
+  <div class="character-header">
+    <a href="char003.html" class="nav-arrow">◀</a>
+    <div class="character-name">
+      <ruby>青園 秀優<rt>あおぞの しゅう</rt></ruby>
+    </div>
+    <a href="char005.html" class="nav-arrow">▶</a>
+  </div>
+
+  <div class="character-content">
+    <!-- 左側（立ち絵＋セリフ） -->
+    <div class="character-visual">
+      <div class="character-bg">
+        <img src="../css/image/pcta/004_3.png" alt="背景">
+        <img id="main-standing" src="../css/image/pcta/004_1.png" alt="立ち絵" class="standing">
+      </div>
+
+<div class="character-variations">
+  <div class="variation">
+    <img src="../css/image/pcta/004_2.png" alt="差分1"
+         onclick="changeStanding('../css/image/pcta/004_1.png')">
+    <span class="caption">通常</span>
+  </div>
+
+  <div class="variation">
+    <img src="../css/image/pcta/sab02.png" alt="差分2"
+         onclick="changeStanding('../css/image/pcta/004_4.png')">
+    <span class="caption">目の差分</span>
+  </div>
+</div>
+
+
+
+    </div>
+
+    <!-- 右側（情報パネル） -->
+    <div class="character-info">
+      <div class="info-block">
+        <p>出身シナリオ：<br/>永虹灰帰のポリス</p>
+        <p>HO：blue</p>
+      </div>
+
+      <div class="profile-box">
+  <div class="profile-row">
+    <span class="profile-label">年齢</span>
+    <span class="profile-value">25</span>
+  </div>
+  <div class="profile-row">
+    <span class="profile-label">性別</span>
+    <span class="profile-value">男</span>
+  </div>
+  <div class="profile-row">
+    <span class="profile-label">身長</span>
+    <span class="profile-value">176</span>
+  </div>
+  <div class="profile-row">
+    <span class="profile-label">職業</span>
+    <span class="profile-value">公安</span>
+  </div>
+    <div class="profile-row">
+    <span class="profile-label">好物</span>
+    <span class="profile-value">ビーフシチュー</span>
+  </div>
+</div>
+
+      <div class="info-block collapsible">
+        <button class="toggle-btn">キャラクターメモ ▼</button>
+        <div class="toggle-content">
+          <p>才能があると言われ、育ってきた。<br/>
+          理想が高いのに対して、自分に甘い。
+今まで常に生まれ持った力のみでどうにかなってしまっていた。
+そのため、努力の方法を知らない。<br/>
+
+他人を見下し、蹴落とす方法しか知らない</p>
+<p>「俺はお前らとは、違う。」</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <button class="toggle-btn">通過シナリオ ▼</button>
+        <div class="toggle-content">
+          <ul>
+            <li>永虹灰帰のポリス(HO:blue)</li>
+          </ul>
+        </div>
+      </div>
+                    <div class="color-box">
+    <span class="label">イメージカラー</span>
+    <span class="color-swatch" style="background-color:#1C2AB3;"></span>
+    <span class="color-code">#1C2AB3</span>
+  </div>
+
+      <div class="info-block">
+        <a href="https://iachara.com/view/9326509" target="_blank">いあきゃらへ</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+<script src="../js/menyu.js"></script>
+<script src="pcs.js"></script>
+</html>

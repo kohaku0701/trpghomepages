@@ -1,0 +1,72 @@
+.scenario-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+.scenario-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.scenario-card:hover {
+  transform: translateY(-5px);
+}
+.scenario-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeUp 0.4s ease;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.tag-filter {
+  margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+}
+
+.tag-filter label {
+  font-size: 0.9em;
+  background: #f6f6f6;
+  padding: 0.3em 0.6em;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tag-filter input[type="checkbox"] {
+  margin-right: 0.3em;
+}

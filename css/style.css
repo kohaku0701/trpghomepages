@@ -202,3 +202,35 @@ main{
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
+
+.info-box {
+  position: relative;
+  padding: 1em;
+  right: 1em;
+  background: #f8f5ef;
+  border-radius: 8px;
+  width: 100px;
+  margin-right: 10%;
+}
+
+.more-small {
+  position: absolute;
+  right: 1em;
+  bottom: 0.5em;
+  font-size: 0.9em;
+  color: #333;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+}
+
+.info-box:hover{
+    transform: scale(1.05);
+}
+
+.more-small:hover {
+  opacity: 0.7;
+  color: #daadff;
+
+}

@@ -234,3 +234,34 @@ main{
   color: #daadff;
 
 }
+
+
+/*探索者回転すし*/
+
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-content {
+    display: inline-block;
+    animation: scroll 72s linear infinite;
+}
+
+.scroll-content img {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
